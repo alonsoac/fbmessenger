@@ -1179,6 +1179,8 @@ class erLhcoreClassExtensionFbmessenger {
 				    foreach ($attatchements as $data) {
 				        if ($data['type'] == 'file') {
 				            $messageText .= '[url=' . $data['payload']['url'].']Download file[/url]';
+				        } else if ($data['type'] == 'audio') {
+                        			$messageText .= '[url=' . $data['payload']['url'].']Audio[/url]';						
 				        } else if ($data['type'] == 'image') {
 				            $messageText .= '[img]' . $data['payload']['url'].'[/img]';
 				        } else {
@@ -1249,6 +1251,8 @@ class erLhcoreClassExtensionFbmessenger {
 			        foreach ($attatchements as $data) {
 			            if ($data['type'] == 'file') {
 			                $messageText .= '[url=' . $data['payload']['url'].']Download file[/url]';
+			            } else if ($data['type'] == 'audio') {
+                        		$messageText .= '[url=' . $data['payload']['url'].']Audio[/url]';					    
 			            } else if ($data['type'] == 'image') {
 			                $messageText .= '[img]' . $data['payload']['url'].'[/img]';
 			            } else {
@@ -1377,6 +1381,8 @@ class erLhcoreClassExtensionFbmessenger {
                 foreach ($attatchements as $data) {
                     if ($data['type'] == 'file') {
                         $messageText .= '[url=' . $data['payload']['url'].']Download file[/url]';
+        	    } else if ($data['type'] == 'audio') {
+	                $messageText .= '[url=' . $data['payload']['url'].']Audio[/url]';			    
                     } else if ($data['type'] == 'image') {
                         $messageText .= '[img]' . $data['payload']['url'].'[/img]';
                     } else if ($data['type'] == 'location') {
